@@ -1,0 +1,33 @@
+query GetAllComptes {
+    allComptes {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+
+query GetCompteById($id: ID!) {
+    compteById(id: $id) {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+
+mutation SaveCompte($compte: CompteInput!) {
+    saveCompte(compte: $compte) {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+query GetTotalSolde {
+    totalSolde {
+        count
+        sum
+        average
+    }
+}
